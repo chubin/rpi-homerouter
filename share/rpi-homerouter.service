@@ -1,0 +1,15 @@
+[Unit]
+Description=RPi Home Router
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/git/rpi-homerouter/share/rpi-homerouter.sh start
+ExecStop=/home/pi/git/rpi-homerouter/share/rpi-homerouter.sh stop
+
+# Give a reasonable amount of time for the server to start up/shut down
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
