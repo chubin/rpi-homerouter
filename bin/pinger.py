@@ -215,7 +215,8 @@ def pinger():
                         old_gw = new_gw
                         update_state = True
                 else:
-                    log( "Using the backup uplink: %s [%s,%s]" % (new_gw, backup_if, backup_if_status) )
+                    pass
+                    #log( "Using the backup uplink: %s [%s,%s]" % (new_gw, backup_if, backup_if_status) )
         else:
             # main uplink is alive
             # if we have been used the backup switch to the main
@@ -227,7 +228,8 @@ def pinger():
                     old_gw = new_gw
                     update_state = True
             else:
-                log( "Using the main uplink: %s [%s,%s]" % (new_gw, main_if, main_if_status) )
+                pass
+                #log( "Using the main uplink: %s [%s,%s]" % (new_gw, main_if, main_if_status) )
 
 t = Thread( target=pinger)
 t.setDaemon( True )
