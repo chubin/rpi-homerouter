@@ -12,3 +12,10 @@ You can add it to /etc/network/interfaces or in oher network initialization file
     apt-get install python-dev
     pip install -r requirements.txt
 
+To install systemd-service file:
+
+    cp share/rpi-homerouter.service /etc/systemd/system/rpi-homerouter.service
+    systemctl enable rpi-homerouter.service
+    systemctl start rpi-homerouter.service
+    
+
